@@ -4,7 +4,7 @@ class Validator {
 	}
 	validateUsername(userName) {
 		
-		const re = /[a-z][^0-9]/i;
+		const re = /^[^\d][a-z\-\_0-9]+[^0-9][^\-\_]/i;
 		// const re = /\d/    [-_][0-9]
 		console.log(re.test(userName))
 		return re.test(userName);
